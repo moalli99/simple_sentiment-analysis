@@ -193,36 +193,8 @@ In future iterations, this project can be enhanced using advanced techniques suc
 2. **Hyperparameter Optimization** – Using techniques like Grid Search, Random Search, or Bayesian Optimization to find the best model parameters.  
 3. **Advanced NLP Techniques** – Incorporating modern architectures such as Transformers, BERT, or GPT-based models for better contextual understanding and sentiment classification.
 
-## Installation & Setup
 
-Follow these steps to set up and run the project locally:
 
-1. **Clone the repository:**
-
-```bash
-git clone https://github.com/your-username/simple_sentiment-analysis.git
-cd simple_sentiment-analysis
-python -m venv venv
-venv\Scripts\activate
-2.**Create and activate a virtual environment:**
-  -windows
-python -m venv venv
-venv\Scripts\activate
--Mac/Linux:
-python -m venv venv
-source venv/bin/activate
-3-**Install dependencies:**
-pip install -r requirements.txt
-4-**Download GloVe embeddings:**
-
-Visit GloVe website
-
-Download glove.6B.zip and extract glove.6B.300d.txt into data/.
-
-5-**Download IMDb Dataset (Kaggle):**
-Place dataset files in data/.
-6-Run the project:
-python main.py
 
 
 
