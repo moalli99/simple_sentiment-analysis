@@ -128,7 +128,7 @@ The `processing.py` module performs all preprocessing steps before training:
 
 **Confusion Matrix Placeholder:**
 
-![Test Confusion Matrix](images/cm_val_gru.png)
+![Test Confusion Matrix](images/cm_base_line2.png)
 
 **Training & Validation Curves:**
 
@@ -160,7 +160,7 @@ The `processing.py` module performs all preprocessing steps before training:
 
 **Confusion Matrix Placeholder:**
 
-![Test Matrix](images/cm_val_lstm_w2v.png)
+![Test Matrix](images/cm_base_line3.png)
 
 **Training & Validation Curves:**
 
@@ -223,6 +223,7 @@ Download glove.6B.zip and extract glove.6B.300d.txt into data/.
 Place dataset files in data/.
 6-Run the project:
 python main.py
+
 
 
 
