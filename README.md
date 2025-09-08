@@ -17,11 +17,50 @@ The goal of this project is to classify text as **positive** or **negative** bas
 - Modular Python code for easy understanding and maintenance.
 - Generates plots for training/validation accuracy, loss, and confusion matrix.
 
-  1. [Preprocessing](#preprocessing)
+1. [Preprocessing](#preprocessing)
 2. [Baseline Models](#baseline-models)
     - [Baseline 0: Logistic Regression](#baseline-0-logistic-regression)
     - [Baseline 1: LSTM](#baseline-1-lstm)
     - [Baseline 2: GRU](#baseline-2-gru)
     - [Baseline 3: LSTM&Glove](#baseline-3-LSTM&Glove)
+### preprocessing
+
+The preprocessing module (`processing.py`) contains all necessary steps before training the models:
+
+1. **process_**
+   - Cleans raw text (removes punctuation, digits, extra spaces, lowercase).
+
+2. **tockenize**
+   - Tokenizes text into words, removes stopwords, encodes words to integers, and splits data into train/val/test sets.
+
+3. **padding**
+   - Pads sequences to a fixed length (e.g., 100) for uniform input to models.
+
+4. **buile_embedding_matrix**
+   - Loads pretrained GloVe embeddings and maps words in the vocabulary to their vector representations.
+   - Words not in GloVe are initialized randomly.
+
+  ### Baseline 0: Logistic Regression
+
+This is the first baseline model using **Logistic Regression** with TF-IDF features.
+
+**Steps:**
+1. **Vectorization:** Convert text to TF-IDF numerical features using `TfidfVectorizer`.
+2. **Training:** Train Logistic Regression on training set.
+3. **Prediction:** Predict labels on training and validation sets.
+4. **Evaluation:** Compute metrics including:
+   - **Accuracy**
+   - **Classification report** (precision, recall, F1-score)
+   - **Confusion matrix**
+
+**Code Example:**
+```python
+from baseline0 import train_evaluate_logistic
+
+train_evaluate_logistic(X_train_text, y_train, X_val_text, y_val)
+
+
+  
       
+
 
