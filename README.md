@@ -70,19 +70,56 @@ This is the first baseline model using **Logistic Regression** with TF-IDF featu
 | **Weighted avg**| 0.89      | 0.89   | 0.89     | 10000   |
 
    - **Confusion matrix**
-   - 
+     ![Validation Confusion Matrix](images/cm_base_line0.png)
 
-**Code Example:**
-![Validation Confusion Matrix](images/cm_base_line0.png)
 
-```python
-from baseline0 import train_evaluate_logistic
+### Baseline 1: LSTM
 
-train_evaluate_logistic(X_train_text, y_train, X_val_text, y_val)
+This baseline model uses a **Two LSTM** for sentiment analysis.  
+It processes sequences of word indices (encoded sentences) and learns patterns over time to classify sentiment.
+
+**Model Architecture:**
+- **Embedding Layer:** Converts word indices to dense vectors.
+- **LSTM Layer:** Learns sequential patterns in the text.
+- **Dropout Layer:** Prevents overfitting.
+- **Fully Connected Layer:** Maps hidden state to output dimension.
+- **Sigmoid Activation:** Outputs probabilities for binary classification.
+  #### Accuracy
+
+| Dataset    | Accuracy |
+|-----------|----------|
+| Training  | 0.9015   |
+| Validation| 0.8788   |
+| Test      | 0.8836   |
+#### Test Classification Report
+
+| Class           | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| 0 (Negative)    | 0.89      | 0.88   | 0.88     | 3750    |
+| 1 (Positive)    | 0.88      | 0.89   | 0.88     | 3750    |
+| **Accuracy**    | -         | -      | 0.88     | 7500    |
+| **Macro avg**   | 0.88      | 0.88   | 0.88     | 7500    |
+| **Weighted avg**| 0.88      | 0.88   | 0.88     | 7500    |
+
+**Test Confusion Matrix Placeholder:**
+
+![Validation Confusion Matrix](images/cm_base_line1.png)
+### Training & Validation Curves
+
+During training, we monitored **training and validation loss and accuracy**.  
+I also used an **Early Stopping** mechanism based on **validation accuracy** to prevent overfitting.
+
+![Training and Validation Loss&Accuracy](images/base_line1.png)
+
+
+  
+
+
 
 
   
       
+
 
 
 
