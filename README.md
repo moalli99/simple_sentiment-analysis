@@ -17,6 +17,8 @@ The goal of this project is to classify text as **positive** or **negative** bas
 - Modular Python code for easy understanding and maintenance.
 - Generates plots for training/validation accuracy, loss, and confusion matrix.
 
+## Table of contents
+
 1. [Preprocessing](#preprocessing)
 2. [Baseline Models](#baseline-models)
     - [Baseline 0: Logistic Regression](#baseline-0-logistic-regression)
@@ -50,7 +52,23 @@ This is the first baseline model using **Logistic Regression** with TF-IDF featu
 3. **Prediction:** Predict labels on training and validation sets.
 4. **Evaluation:** Compute metrics including:
    - **Accuracy**
+ #### Training & Validation Accuracy
+
+| Dataset    | Accuracy |
+|-----------|----------|
+| Training  |  0.91     |
+| Validation| 0.89    |
    - **Classification report** (precision, recall, F1-score)
+     #### Classification Report (Validation)
+
+| Class           | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| 0 (Negative)    | 0.90      | 0.89   | 0.89     | 5000    |
+| 1 (Positive)    | 0.89      | 0.90   | 0.90     | 5000    |
+| **Accuracy**    | -         | -      | 0.89     | 10000   |
+| **Macro avg**   | 0.89      | 0.89   | 0.89     | 10000   |
+| **Weighted avg**| 0.89      | 0.89   | 0.89     | 10000   |
+
    - **Confusion matrix**
 
 **Code Example:**
@@ -62,5 +80,6 @@ train_evaluate_logistic(X_train_text, y_train, X_val_text, y_val)
 
   
       
+
 
 
