@@ -109,7 +109,7 @@ It processes sequences of word indices (encoded sentences) and learns patterns o
 During training, we monitored **training and validation loss and accuracy**.  
 I also used an **Early Stopping** mechanism based on **validation accuracy** to prevent overfitting.
 
-![Training and Validation Loss&Accuracy](images/base_line1.png)
+![Training and Validation Loss&Accuracy](images/baseline1.png)
 
 
   
@@ -119,6 +119,7 @@ I also used an **Early Stopping** mechanism based on **validation accuracy** to 
 
   
       
+
 
 
 
