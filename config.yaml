@@ -1,0 +1,22 @@
+BATCH_SIZE: 50
+SEQ_LEN: 500
+LR: 0.001
+EPOCHS: 10
+EMBEDDING_DIM: 300
+HIDDEN_DIM: 300
+N_LAYERS: 2
+OUTPUT_DIM: 1
+DROPOUT: 0.3
+vocab_size: 10000
+file_path: "data/IMDB Dataset.csv"
+test_size: 0.5
+temp_size: 0.3
+random_state: 42
+CLIP: 5
+model_base_line: 3
+Glove_path: "data/glove.6B.300d.txt"
+
+early_stopping:
+  patience: 3
+  delta: 0.001
+
