@@ -70,8 +70,11 @@ This is the first baseline model using **Logistic Regression** with TF-IDF featu
 | **Weighted avg**| 0.89      | 0.89   | 0.89     | 10000   |
 
    - **Confusion matrix**
+   - 
 
 **Code Example:**
+![Validation Confusion Matrix](images/cm_base_line0.png)
+
 ```python
 from baseline0 import train_evaluate_logistic
 
@@ -80,6 +83,7 @@ train_evaluate_logistic(X_train_text, y_train, X_val_text, y_val)
 
   
       
+
 
 
 
